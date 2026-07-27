@@ -1,0 +1,30 @@
+language: en-US
+
+reviews:
+  profile: chill
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+
+chat:
+  auto_reply: true
+
+path_filters:
+  - "!node_modules/**"
+  - "!dist/**"
+  - "!coverage/**"
+
+knowledge_base:
+  enabled: true
+
+tools:
+  biome:
+    enabled: true
+
+  eslint:
+    enabled: false
+
+  github:
+    enabled: true
