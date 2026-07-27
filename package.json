@@ -1,0 +1,59 @@
+{
+  "name": "housebridge-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the HouseBridge student housing platform.",
+  "private": true,
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
+      "biome check --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony-clex/HouseBridge-Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tony-clex/HouseBridge-Backend/issues"
+  },
+  "homepage": "https://github.com/tony-clex/HouseBridge-Backend#readme",
+  "keywords": [
+    "housebridge",
+    "backend",
+    "nestjs",
+    "typescript",
+    "student-housing",
+    "api"
+  ],
+  "author": "Bimela Tony",
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
+    "@types/node": "^26.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
+    "tsx": "^4.23.1",
+    "typescript": "^5.9.3"
+  }
+}
