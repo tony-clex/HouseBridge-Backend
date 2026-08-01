@@ -1,6 +1,7 @@
 import type { Request, Response } from "express";
 import type { AuthenticatedRequest } from "../middleware/authenticate";
 import { uploadImageToCloudinary } from "../utils/cloudinary";
+
 import { supabase } from "../utils/supabase";
 
 export const getProperties = async (req: Request, res: Response) => {
